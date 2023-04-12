@@ -4,8 +4,8 @@ import hashlib
 import hmac
 import uuid
 
-api_key='XXXXXXXXX'
-secret_key='XXXXXXXXX'
+api_key='LFQ6EZFTpapsKYl1oc'
+secret_key='xCMAn15OavPkiOyKqreXPlSf2p7Yq0TwjvM7'
 httpClient=requests.Session()
 recv_window=str(5000)
 url="https://api-testnet.bybit.com" # Testnet endpoint
@@ -39,7 +39,7 @@ def genSignature(payload):
 endpoint="/contract/v3/private/order/create"
 method="POST"
 orderLinkId=uuid.uuid4().hex
-params='{"symbol": "BTCUSDT","side": "Buy","positionIdx": 1,"orderType": "Limit","qty": "0.001","price": "10000","timeInForce": "GoodTillCancel","orderLinkId": "' + orderLinkId + '"}'
+params='{"symbol": "BTCUSDT","side": "Buy","positionIdx": 1,"orderType": "Limit","qty": "0.003","price": "10000","timeInForce": "GoodTillCancel","orderLinkId": "' + orderLinkId + '"}'
 HTTP_Request(endpoint,method,params,"Create")
 
 #Get unfilled Orders
